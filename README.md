@@ -1,4 +1,4 @@
-# flutter_application_1
+# flutter_application_spinwheel
 
 A new Flutter project.
 
