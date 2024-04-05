@@ -298,7 +298,7 @@ class QuizResultState extends State<QuizResult>
                     child: Icon(
                       Icons.arrow_drop_down_rounded,
                       size: 200,
-                      color: Colors.amber,
+                      color: Color.fromARGB(255, 235, 216, 72),
                     ),
                   ))
             ],
