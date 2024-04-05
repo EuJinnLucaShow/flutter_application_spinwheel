@@ -214,11 +214,12 @@ class QuizResultState extends State<QuizResult>
   double _rotationAngle = 0.0;
 
   final List<MultiplierSection> multiplierSections = [
-    MultiplierSection(startAngle: 0, endAngle: 72, multiplier: 5),
-    MultiplierSection(startAngle: 72, endAngle: 144, multiplier: 10),
-    MultiplierSection(startAngle: 144, endAngle: 216, multiplier: 25),
-    MultiplierSection(startAngle: 216, endAngle: 288, multiplier: 1),
-    MultiplierSection(startAngle: 288, endAngle: 360, multiplier: 1),
+    MultiplierSection(startAngle: 0, endAngle: 60, multiplier: 5),
+    MultiplierSection(startAngle: 60, endAngle: 120, multiplier: 10),
+    MultiplierSection(startAngle: 120, endAngle: 180, multiplier: 25),
+    MultiplierSection(startAngle: 180, endAngle: 240, multiplier: 5),
+    MultiplierSection(startAngle: 240, endAngle: 300, multiplier: 10),
+    MultiplierSection(startAngle: 300, endAngle: 360, multiplier: 25),
   ];
 
   @override
