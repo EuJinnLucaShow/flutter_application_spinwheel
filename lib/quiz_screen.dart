@@ -273,20 +273,35 @@ class QuizResultState extends State<QuizResult>
           Text('Your score: ${widget.totalScore}',
               style: const TextStyle(fontSize: 40, color: Colors.white)),
           const SizedBox(height: 30),
-          AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              _rotationAngle = _controller.value * pi * 2.0;
-              return Transform.rotate(
-                angle: _rotationAngle,
-                child: child,
-              );
-            },
-            child: Image.asset(
-              'images/wheel.png',
-              fit: BoxFit.contain,
-              width: 350,
-            ),
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              AnimatedBuilder(
+                animation: _controller,
+                builder: (context, child) {
+                  _rotationAngle = _controller.value * pi * 2.0;
+                  return Transform.rotate(
+                    angle: _rotationAngle,
+                    child: child,
+                  );
+                },
+                child: Image.asset(
+                  'images/wheel.png',
+                  fit: BoxFit.contain,
+                  width: 350,
+                ),
+              ),
+              const Positioned.fill(
+                  top: -100,
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Icon(
+                      Icons.arrow_drop_down_rounded,
+                      size: 200,
+                      color: Colors.amber,
+                    ),
+                  ))
+            ],
           ),
           const SizedBox(height: 30),
           GestureDetector(
